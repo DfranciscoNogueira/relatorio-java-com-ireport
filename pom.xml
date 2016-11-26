@@ -59,14 +59,14 @@
       <version>3.10-FINAL</version>
     </dependency>
    
-    <!-- Usado para criação de código de barras, muito usado em relatórios que serão lidos com leitores de código de barras. -->
+    <!-- Usado para criação de código de barras, utilizado em relatórios que são lidos com leitores de código de barras. -->
     <dependency>
       <groupId>net.sourceforge.barbecue</groupId>
       <artifactId>barbecue</artifactId>
       <version>1.5-beta1</version>
     </dependency>
    
-    <!-- Responsável por gerar o relatório em si, utilizando as ferramentas auxiliares apresentadas em nosso pom.xml. -->
+    <!-- Responsável por gerar o relatório em si, utilizando as ferramentas auxiliares que estao no pom.xml. -->
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports</artifactId>
