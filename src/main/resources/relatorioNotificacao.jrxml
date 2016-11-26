@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioNotificacao" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="33ccae38-b5fe-4cef-bc87-a45c18ddcda3">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nome" class="java.lang.String"/>
+	<title>
+		<band height="168" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="10" width="162" height="30" uuid="3d6be5b8-d834-41f3-a945-08d7904074a8"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Relatórios em Java com iReport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="76" width="554" height="24" uuid="851c931f-651c-4f6f-b005-ccf42e185d69"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NOME DAS PESSOAS NOTIFICADAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-6" positionType="FixRelativeToBottom" mode="Opaque" x="1" y="0" width="166" height="17" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#CCCCCC" uuid="0b44e49a-2e4f-425f-ac04-823fb6f9dee4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="166" height="27" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#F9F9F9" uuid="73e3a5d9-b9af-4758-a374-22960906a19e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="1" y="0" width="166" height="27" uuid="b2d5d0f3-dbb2-4b6f-9a27-8e6877b6f5b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="9" y="0" width="539" height="1" uuid="371f2f42-75fb-4191-876d-7cb79a696077"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<textField evaluationTime="Report">
+				<reportElement x="533" y="0" width="15" height="16" uuid="d6bd2a3c-5648-4fe0-b485-a0be3428ff77"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="17" height="16" uuid="10bf7b1b-406e-49b0-a15d-50df6c7dcd30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="476" y="1" width="28" height="15" uuid="0ed7bce8-ba5b-474c-a6b2-e20830f87ae8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="0" width="12" height="16" uuid="2795366c-da13-4572-a4bf-eda69a6f6406"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="9" y="0" width="124" height="16" uuid="1d8ac388-662d-4d26-a8d4-56d069f429b8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
